@@ -1,0 +1,21 @@
+{
+    "name": "task_1",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "npm-run-parallel watch serve",
+        "watch": "tsc --watch",
+        "serve": "serve ./",
+        "build": "tsc"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "npm-run-parallel": "^0.6.0",
+        "serve": "^13.0.2",
+        "typescript": "^4.7.4"
+    }
+}
