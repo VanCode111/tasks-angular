@@ -13,7 +13,7 @@ interface IData {
     temp: ITemp;
 }
 
-type IDateMap = Map<string, IData[]>;
+type TDateMap = Map<string, IData[]>;
 
 const getUniqueDates = (data: IData[]): Set<string> => {
     const uniqueDates: Set<string> = new Set();
@@ -23,10 +23,10 @@ const getUniqueDates = (data: IData[]): Set<string> => {
     return uniqueDates;
 };
 
-const getDatesMap = (data: IData[]): IDateMap => {
-    const dateMap: IDateMap = new Map();
+const getDatesMap = (data: IData[]): TDateMap => {
+    const dateMap: TDateMap = new Map();
 
-    const addElement = (item: IData, dateMap: IDateMap): void => {
+    const addElement = (item: IData, dateMap: TDateMap): void => {
         if (dateMap.has(item.dt)) {
             dateMap.get(item.dt).push(item);
         } else {
@@ -43,7 +43,7 @@ const data: IData[] = response;
 
 const uniqueDates: Set<string> = getUniqueDates(data);
 
-const datesMap: IDateMap = getDatesMap(data);
+const datesMap: TDateMap = getDatesMap(data);
 
 console.log(uniqueDates);
 console.log(datesMap);
