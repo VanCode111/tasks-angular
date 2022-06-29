@@ -39,7 +39,7 @@ const getDatesMap = (data: IData[]): TDateMap => {
     return dateMap;
 };
 
-const data: IData[] = response;
+const data = response;
 
 const uniqueDates: Set<string> = getUniqueDates(data);
 
