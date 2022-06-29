@@ -30,11 +30,7 @@ printKeysMessages(keyNumbers);
 const checkHouse = (houseData: string[]): boolean => {
     const [area, status, owners, street] = houseData;
 
-    if (area === "56" || (area === "40" && street === "Ленина")) {
-        return true;
-    }
-
-    return false;
+    return area === "56" || (area === "40" && street === "Ленина");
 };
 
 const checkAllHouses = (houses: string[][]): void => {
@@ -47,6 +43,7 @@ const houses: string[][] = [
     ["56", "не приватизирован", "1 собственник", "Луговая"],
     ["56", "приватизирован", "5 собственников", "Ленина"],
     ["25", "не приватизирован", "2 собственника", "Ленина"],
+    ["40", "не приватизирован", "2 собственника", "Ленина"],
 ];
 
 checkAllHouses(houses);
